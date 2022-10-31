@@ -1,0 +1,19 @@
+.up-bg {
+    color: #fff;
+    background: #506814;
+    padding: 10px;
+    font-size: 14px;
+    float: left;
+    width: 100%;
+}
+td, th {
+    padding: 4px 10px;
+    vertical-align: middle;
+}
+td, th {
+    padding: 4px 10px;
+    vertical-align: middle;
+}
+table, th, td {
+    border: 1px solid black;
+  }

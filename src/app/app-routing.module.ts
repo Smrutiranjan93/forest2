@@ -14,6 +14,7 @@ import { ResearchComponent } from './common/research/research.component';
 import { RoundtimberComponent } from './common/roundtimber/roundtimber.component';
 import { SawntimberComponent } from './common/sawntimber/sawntimber.component';
 import { SiteclearanceComponent } from './common/siteclearance/siteclearance.component';
+import { StockavailabilityComponent } from './common/stockavailability/stockavailability.component';
 import { TenderComponent } from './common/tender/tender.component';
 import { TimberfirewoodComponent } from './common/timberfirewood/timberfirewood.component';
 
@@ -81,6 +82,10 @@ const routes: Routes = [
 {
   path:'career',
   component:CareerComponent
+},
+{
+  path:'stockavailability',
+  component:StockavailabilityComponent
 }
 
 ];
