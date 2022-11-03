@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class ServiceService {
 
-  PATH_OF_API='http://117.211.75.160:8064/api';
+  PATH_OF_API='http://117.211.75.160:8065/api';
   // PATH_OF_API2='http://117.211.75.160:8064/api';
   requestHeader=new HttpHeaders({'No-Auth':'True'});
   constructor(private http:HttpClient) { }
