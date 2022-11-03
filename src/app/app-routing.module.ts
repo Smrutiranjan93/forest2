@@ -5,7 +5,9 @@ import { CareerComponent } from './career/career.component';
 import { AboutComponent } from './common/about/about.component';
 import { BambooComponent } from './common/bamboo/bamboo.component';
 import { ContactUsComponent } from './common/contact-us/contact-us.component';
+//import { ContactUsComponent } from './common/contact-us/contact-us.component';
 import { EventdetailsComponent } from './common/eventdetails/eventdetails.component';
+import { GreivanceregistrationComponent } from './common/greivanceregistration/greivanceregistration.component';
 import { KenduleafComponent } from './common/kenduleaf/kenduleaf.component';
 import { MasterPlanComponent } from './common/master-plan/master-plan.component';
 import { PhotoGalleryComponent } from './common/photo-gallery/photo-gallery.component';
@@ -16,6 +18,7 @@ import { SawntimberComponent } from './common/sawntimber/sawntimber.component';
 import { SiteclearanceComponent } from './common/siteclearance/siteclearance.component';
 import { StockavailabilityComponent } from './common/stockavailability/stockavailability.component';
 import { TenderComponent } from './common/tender/tender.component';
+import { TenderfilesComponent } from './common/tenderfiles/tenderfiles.component';
 import { TimberfirewoodComponent } from './common/timberfirewood/timberfirewood.component';
 
 const routes: Routes = [
@@ -68,8 +71,8 @@ const routes: Routes = [
   component:TimberfirewoodComponent
 },
 {
-  path:'contactus',
-  component:ContactUsComponent
+  path:'contact',
+  component: ContactUsComponent
 },
 {
   path:'photos',
@@ -86,6 +89,14 @@ const routes: Routes = [
 {
   path:'stockavailability',
   component:StockavailabilityComponent
+},
+{
+  path:'tenderfiles', 
+  component:TenderfilesComponent
+},
+{
+  path:'greivanceregistration',
+  component:GreivanceregistrationComponent
 }
 
 ];

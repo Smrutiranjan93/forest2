@@ -1,0 +1,337 @@
+<section id="breadcrumbs" class="breadcrumbs">
+    <div class="container">
+
+      <div class="d-flex justify-content-between align-items-center">
+        <h2>Complaint</h2>
+        <ol>
+          <li><a href="index.html">Home</a></li>
+          <li>Complaint</li>
+        </ol>
+      </div>
+
+    </div>
+  </section>
+
+  <div class="row justify-content-center mt-5" >
+    <div class="col-md-2" style="display:flex ; " >
+     
+     <input  name="first_name" placeholder="Enter Complaint no." class="form-control"  type="text" style="padding: 0px 0px;"> 
+     <!-- <div class="col-md-6" style="display:inline-block ;"> -->
+
+     <button type="submit" class="btn btn-primary text-center" >SUBMIT <span class="glyphicon glyphicon-send"></span></button>
+     <!-- </div> -->
+        
+
+    </div>
+<!-- <div class="main"> -->
+    <div class="row justify-content-center"style="margin:10px 50px ;" >
+
+<div class="Registration col-md-10 col-md-offset-5 align-center m-5">
+
+    <form class="well form-horizontal" [formGroup]="greivanceForm" (ngSubmit)="grievanceUpload()"  method="post"  id="greivanceForm">
+<fieldset>
+
+<!-- Form Name -->
+<legend><h2 class="text-center mt-3"><b>Register Complaint</b></h2></legend><br>
+
+<!-- Text input-->
+<div class="row">
+    <div class="col-md-4">
+        <label class="col-md-4 control-label">ComplaintCategory</label>  
+        <input  name="complaintCategory" placeholder="ComplaintCategory" formControlName="complaintCategory" class="form-control"  type="text">
+    </div>
+    <div class="col-md-4">
+        <label class="col-md-4 control-label">Complaint</label>  
+        <input  name="complaint" placeholder="Complaint" formControlName="complaint" class="form-control"  type="text">
+    </div>
+    <div class="col-md-4">
+        <label class="col-md-4 control-label">Date</label>  
+        <input   name="date" placeholder="Date" formControlName="date" class="form-control"  type="date" id="myId" >
+    </div>
+   
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <label class="col-md-4 control-label">Name</label>  
+        <input  name="name" placeholder="Name" formControlName="name" class="form-control"  type="text">
+    </div>
+    <div class="col-md-4">
+        <label class="col-md-4 control-label">Email</label>  
+        <input  name="email" placeholder="Email" formControlName="email" class="form-control"  type="text">
+    </div>
+    <div class="col-md-4">
+        <label class="col-md-4 control-label">MobileNo</label>  
+        <input name="mobileNo" placeholder="MobileNo" formControlName="mobileNo" class="form-control"  type="text">
+    </div>
+   
+</div>
+
+
+<div class="row">
+    <div class="col-md-4">
+        <label class="col-md-4 control-label">HouseNo</label>  
+        <input  name="houseNo" placeholder="HouseNo" formControlName="houseNo" class="form-control"  type="text">
+    </div>
+    <div class="col-md-4">
+        <label class="col-md-4 control-label">Street</label>  
+        <input  name="street" placeholder="Street" formControlName="street" class="form-control"  type="text">
+    </div>
+    <div class="col-md-4">
+        <label class="col-md-4 control-label">Area</label>  
+        <input  name="area" placeholder="Area" formControlName="area" class="form-control"  type="text">
+    </div>
+   
+</div>
+
+<div class="row">
+    <div class="col-md-8 col-sm-4">
+        <label class="col-xl-8 col-md-8 col-sm-4 col-4 control-label">Description</label>  
+        <textarea class="control-label col-4 col-md-10 col-sm-4 col-xl-12 col-lg-10" name="complainDescription" formControlName="complainDescription" id="" cols="150" rows="7" style="border-radius: 10px;"></textarea>
+        <!-- <input  name="first_name" placeholder="Enter Complaint Description" class="form-control"  type="description"> -->
+    </div>
+    <div class="col-md-4 mt-5">
+        <label class="col-md-4 control-label" for="myfile">Select a file:</label> <br>
+        <input type="file" formControlName="file" id="myfile" name="file">
+    </div>
+    <!-- <div class="col-md-4">
+        <label class="col-md-4 control-label">area</label>  
+        <input  name="first_name" placeholder="area" class="form-control"  type="text">
+    </div> -->
+   
+</div>
+
+<!-- <div class="row">
+    <div class="col-md-3">
+        <label class="col-md-4 control-label">Street</label>  
+        <input  name="first_name" placeholder="Street" class="form-control"  type="text">
+    </div>
+    <div class="col-md-3">
+        <label class="col-md-4 control-label">ComplaintCategory</label>  
+        <input  name="first_name" placeholder="ComplaintCategory" class="form-control"  type="text">
+    </div>
+    <div class="col-md-3">
+        <label class="col-md-4 control-label">ComplainDescription</label>  
+        <input  name="first_name" placeholder="ComplainDescription" class="form-control"  type="text">
+    </div>
+    <div class="col-md-3">
+        <label class="col-md-4 control-label">Complaint</label>  
+        <input  name="first_name" placeholder="Complaint" class="form-control"  type="text">
+    </div>
+    <div class="col-md-3">
+        <label class="col-md-4 control-label">name</label>  
+        <input  name="first_name" placeholder="name" class="form-control"  type="text">
+    </div>
+</div> -->
+<!-- <div class="row">
+    <div class="col-md-3">
+        <label class="col-md-4 control-label">houseNo</label>  
+        <input  name="first_name" placeholder="houseNo" class="form-control"  type="text">
+    </div>
+    <div class="col-md-3">
+        <label class="col-md-4 control-label">startDate</label>  
+        <input  name="first_name" placeholder="startDate" class="form-control"  type="text">
+    </div>
+    <div class="col-md-3">
+        <label class="col-md-4 control-label">endDate</label>  
+        <input  name="first_name" placeholder="endDate" class="form-control"  type="text">
+    </div>
+    <div class="col-md-3">
+        <label class="col-md-4 control-label">area</label>  
+        <input  name="first_name" placeholder="area" class="form-control"  type="text">
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-3">
+        <label class="col-md-4 control-label">duration</label>  
+        <input name="email" placeholder="duration" class="form-control"  type="text">
+
+    </div>
+    <div class="col-md-3">
+        <label class="col-md-4 control-label">zone</label>  
+        <input  name="first_name" placeholder="zone" class="form-control"  type="text">
+    </div>
+    <div class="col-md-3">
+        <label class="col-md-4 control-label">status</label>  
+        <input  name="first_name" placeholder="status" class="form-control"  type="text">
+    </div>
+    <div class="col-md-3">
+        <label class="col-md-4 control-label">roleId</label>  
+        <input  name="first_name" placeholder="roleId" class="form-control"  type="text">
+    </div>
+</div> -->
+
+<!-- <div class="row">
+    <div class="col-md-3">
+        <label class="col-md-4 control-label">mobileNo</label>  
+        <input name="email" placeholder="mobileNo" class="form-control"  type="text">
+    </div>
+    <div class="col-md-3">
+        <label class="col-md-4 control-label">ComplaintNo</label>  
+        <input  name="first_name" placeholder="ComplaintNo" class="form-control"  type="text">
+    </div>
+    <div class="col-md-3">
+        <label class="col-md-4 control-label">assignedUid</label>  
+        <input  name="first_name" placeholder="assignedUid" class="form-control"  type="text">
+    </div>
+    <div class="col-md-3">
+        <label class="col-md-4 control-label">validComplaint</label>  
+        <input  name="first_name" placeholder="validComplaint" class="form-control"  type="text">
+    </div>
+</div> -->
+
+<!-- <div class="row">
+    <div class="col-md-3">
+        <label class="col-md-4 control-label">remarks</label>  
+        <input name="email" placeholder="remarks" class="form-control"  type="text">
+    </div>
+    <div class="col-md-3">
+        <label class="col-md-4 control-label">email</label>  
+        <input  name="first_name" placeholder="email" class="form-control"  type="text">
+    </div>
+    <div class="col-md-3">
+
+        <label class="col-md-4 control-label">fileUrl</label>  
+        <input  name="first_name" placeholder="fileUrl" class="form-control"  type="text">
+    </div>
+    <div class="col-md-3">
+        <label class="col-md-4 control-label">createdBy</label>  
+        <input  name="first_name" placeholder="createdBy" class="form-control"  type="text">
+    </div>
+</div> -->
+
+<!-- <div class="form-group">
+  <label class="col-md-4 control-label">First Name</label>  
+  <div class="col-md-4 inputGroupContainer">
+  <div class="input-group">
+  <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+  <input  name="first_name" placeholder="First Name" class="form-control"  type="text">
+    </div>
+  </div>
+</div> -->
+
+<!-- Text input-->
+
+<!-- <div class="form-group">
+  <label class="col-md-4 control-label" >Last Name</label> 
+    <div class="col-md-4 inputGroupContainer">
+    <div class="input-group">
+  <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+  <input name="last_name" placeholder="Last Name" class="form-control"  type="text">
+    </div>
+  </div>
+</div> -->
+
+  <!-- <div class="form-group"> 
+  <label class="col-md-4 control-label">Department / Office</label>
+    <div class="col-md-4 selectContainer">
+    <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
+    <select name="department" class="form-control selectpicker">
+      <option value="">Select your Department/Office</option>
+      <option>Department of Engineering</option>
+      <option>Department of Agriculture</option>
+      <option >Accounting Office</option>
+      <option >Tresurer's Office</option>
+      <option >MPDC</option>
+      <option >MCTC</option>
+      <option >MCR</option>
+      <option >Mayor's Office</option>
+      <option >Tourism Office</option>
+    </select>
+  </div>
+</div>
+</div> -->
+  
+<!-- Text input-->
+<!-- 
+<div class="form-group">
+  <label class="col-md-4 control-label">Username</label>  
+  <div class="col-md-4 inputGroupContainer">
+  <div class="input-group">
+  <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+  <input  name="user_name" placeholder="Username" class="form-control"  type="text">
+    </div>
+  </div>
+</div> -->
+
+<!-- Text input-->
+
+<!-- <div class="form-group">
+  <label class="col-md-4 control-label" >Password</label> 
+    <div class="col-md-4 inputGroupContainer">
+    <div class="input-group">
+  <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+  <input name="user_password" placeholder="Password" class="form-control"  type="password">
+    </div>
+  </div>
+</div> -->
+
+<!-- Text input-->
+
+<!-- <div class="form-group">
+  <label class="col-md-4 control-label" >Confirm Password</label> 
+    <div class="col-md-4 inputGroupContainer">
+    <div class="input-group">
+  <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+  <input name="confirm_password" placeholder="Confirm Password" class="form-control"  type="password">
+    </div>
+  </div>
+</div> -->
+
+<!-- Text input-->
+       <!-- <div class="form-group">
+  <label class="col-md-4 control-label">E-Mail</label>  
+    <div class="col-md-4 inputGroupContainer">
+    <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+  <input name="email" placeholder="E-Mail Address" class="form-control"  type="text">
+    </div>
+  </div>
+</div> -->
+
+
+<!-- Text input-->
+<!--        
+<div class="form-group">
+  <label class="col-md-4 control-label">Contact No.</label>  
+    <div class="col-md-4 inputGroupContainer">
+    <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
+  <input name="contact_no" placeholder="(639)" class="form-control" type="text">
+    </div>
+  </div>
+</div> -->
+
+<!-- Select Basic -->
+
+<!-- Success message -->
+<div class="alert alert-success" role="alert" id="success_message">Success <i class="glyphicon glyphicon-thumbs-up"></i> Success!.</div>
+
+<!-- Button -->
+<div class="form-group text-center mb-5">
+  <label class="col-md-12 control-label"></label>
+  <div class="col-md-12"><br>
+  <button type="submit" class="btn btn-primary text-center" >SUBMIT <span class="glyphicon glyphicon-send"></span></button>
+  </div>
+</div>
+
+</fieldset>
+</form>
+</div>
+</div>
+  </div>
+    <!-- </div> -->
+    <!-- /.container -->
+
+    <p id="myId"></p> 
+<script> 
+var date = new Date(); 
+var dd = date.getDate(); 
+var mm = date.getMonth() + 1; 
+var yyyy = date.getFullYear(); 
+var newDate = dd + "-" + mm + "-" +yyyy; 
+var p = document.getElementById("myId"); 
+p.innerHTML = newDate; 
+</script> 

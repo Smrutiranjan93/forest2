@@ -105,64 +105,56 @@
     </div>
   </section> -->
 
-  <section class="innbanner" style="margin-top:-80px ;">
-    <!-- <img src=" /assets/images/banner.gif
+<section class="innbanner" style="margin-top:-80px ;">
+  <!-- <img src=" /assets/images/banner.gif
        "> -->
-       <img src="assets/images/team/forest3.jpg" alt="">
-   <!-- <h2 id="backdrop" class="mt-4">Tender Details</h2> -->
+  <img src="assets/images/team/forest3.jpg" alt="">
+  <!-- <h2 id="backdrop" class="mt-4">Tender Details</h2> -->
 </section>
 
 <section style="margin-top:-120px ;">
   <marquee behavior="scroll" direction="left" style="background-color: black;">
-      <a style="color: rgb(6, 6, 5);font-size: 22px; background-color: rgb(244, 222, 57);"><b>Notice : <i>This website is under Beta testing and hence no sensitive
-              information
-              should be entered and hence actual Citizen queries should not be posted. We will notify when the website
-              is
-              available for public usage.</i> </b></a>
+    <a style="color: rgb(6, 6, 5);font-size: 22px; background-color: rgb(244, 222, 57);"><b>Notice : <i>This website is
+          under Beta testing and hence no sensitive
+          information
+          should be entered and hence actual Citizen queries should not be posted. We will notify when the website
+          is
+          available for public usage.</i> </b></a>
   </marquee>
-</section >
-  <div class="container-fluid main " style="margin-top:-110px ;">
-<div class="container" >
+</section>
+<div class="container-fluid main " style="margin-top:-110px ;">
+  <div class="container">
     <div class="row justify-content-center">
-        <div class="contact-form col-md-6 col-md-offset-5 align-center m-5">
-            <div id="success"></div>
-            <h2 class="text-center">UPLOAD TENDER</h2>
-            <form action="" method="POST" name="sentMessage" id="contactForm" novalidate="novalidate">
-                <div class="control-group">
-                    Title:<input type="text" class="form-control" id="name" placeholder="Enter Title" required="required" data-validation-required-message="Please enter your name" />
-                    <p class="help-block text-danger"></p>
-                </div>
-                <div class="control-group">
-                    Issuing Authority:<input type="email" class="form-control" id="email" placeholder="Issuing Authority" required="required" data-validation-required-message="Please enter your email" />
-                    <p class="help-block text-danger"></p>
-                </div>
-                <div class="control-group">
-                    <label for="birthday">End Date: </label> 
-                    <input type="date" id="End Date" name="End Date">
-                    <!-- End Date: <input type="date"> -->
-                </div>
-                <div class="control-group mt-4">
-                    <label for="myfile">Select a file:</label>
-                 <input type="file" id="myfile" name="myfile">
-                </div>
-                <!-- <div class="control-group">
-                    <input type="text" class="form-control" id="subject" placeholder="Mobile" required="required" data-validation-required-message="Please enter a subject" />
-                    <p class="help-block text-danger"></p>
-                </div> -->
-                <!-- <div class="control-group">
-                    <textarea class="form-control" id="message" placeholder="Message" required="required" data-validation-required-message="Please enter your message"></textarea>
-                    <p class="help-block text-danger"></p>
-                </div> -->
-                <div>
-                    <!-- <button class=" text-center button1 mt-4" type="submit" id="" >Submit </button> -->
-                    <button type="button" class="btn btn-primary text-center button1 mt-4">Submit</button>
-                    <button type="button" class="btn btn-danger text-center button1 mt-4">Cancel</button>
-                    <!-- <button class=" text-center button1 mr-4" type="submit" id="" >Cancel </button> -->
-                </div>
-            </form>
-        </div>
+      <div class="contact-form col-md-6 col-md-offset-5 align-center m-5">
+        <h2 class="text-center">UPLOAD TENDER</h2>
+        <form [formGroup]="tenderForm" (ngSubmit)="tenderUpload()" >
+              <div class="control-group">
+                  Title:<input type="text" class="form-control" formControlName="title" id="name" placeholder="Enter Title" required="required" data-validation-required-message="Please enter your name" />
+                  <p class="help-block text-danger"></p>
+              </div>
+              <div class="control-group">
+                  Issuing Authority:<input type="email" class="form-control" formControlName="issuingAuthority" id="email" placeholder="Issuing Authority" required="required" data-validation-required-message="Please enter your email" />
+                  <p class="help-block text-danger"></p>
+              </div>
+              <div class="control-group">
+                  <label for="birthday">End Date: </label> 
+                  <input type="date" id="End Date" formControlName="endDate" name="End Date">
+                  <!-- End Date: <input type="date"> -->
+              </div>
+              <div class="control-group mt-4">
+                  <label for="myfile">Select a file:</label>
+               <input type="file" formControlName="file" id="myfile" name="myfile">
+              </div>
+              <div>
+                  <!-- <button class=" text-center button1 mt-4" type="submit" id="" >Submit </button> -->
+                  <button type="submit" class="btn btn-primary text-center button1 mt-4">Submit</button>
+                  <button type="button" class="btn btn-danger text-center button1 mt-4">Cancel</button>
+                  <!-- <button class=" text-center button1 mr-4" type="submit" id="" >Cancel </button> -->
+              </div>
+          </form>
+      </div>
     </div>
-</div>
+  </div>
 
 
 </div>
@@ -185,7 +177,7 @@
 
     </div>
   </div> -->
-  <!--  <div class="row align-items-center py-3">
+<!--  <div class="row align-items-center py-3">
                 <div class="col-md-3 ps-5">
   
                   <h6 class="mb-0">Full name</h6>

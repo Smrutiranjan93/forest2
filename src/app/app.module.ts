@@ -10,6 +10,13 @@ import { SiteclearanceComponent } from './common/siteclearance/siteclearance.com
 import { TimberfirewoodComponent } from './common/timberfirewood/timberfirewood.component';
 import { RouterModule } from '@angular/router';
 import { CareerComponent } from './career/career.component';
+import { HttpClientModule } from '@angular/common/http';
+import { CommonModule } from '@angular/common';
+import { ContactUsComponent } from './common/contact-us/contact-us.component';
+import { TenderfilesComponent } from './common/tenderfiles/tenderfiles.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { TenderComponent } from './common/tender/tender.component';
+import { GreivanceregistrationComponent } from './common/greivanceregistration/greivanceregistration.component';
 
 @NgModule({
   declarations: [
@@ -19,12 +26,20 @@ import { CareerComponent } from './career/career.component';
     FooterComponent,
     SiteclearanceComponent,
     TimberfirewoodComponent,
-    CareerComponent
+    CareerComponent,
+    ContactUsComponent,
+    TenderfilesComponent,
+    TenderComponent,
+    GreivanceregistrationComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    RouterModule
+    RouterModule,
+    HttpClientModule,
+    CommonModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
