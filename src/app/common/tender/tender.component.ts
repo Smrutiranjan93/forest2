@@ -1,4 +1,4 @@
-// import { HttpParams } from '@angular/common/http';
+// import { HttpParams } from '@angular/common/http'; 
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
 import { ServiceService } from 'src/app/services/service.service';
@@ -11,6 +11,8 @@ import { ServiceService } from 'src/app/services/service.service';
 export class TenderComponent implements OnInit {
   tenderForm: FormGroup;
   submitted: boolean
+  selectedFile:any
+
 
   constructor(private tenderservice: ServiceService,
     private formBuilder: FormBuilder) { }
@@ -22,34 +24,36 @@ export class TenderComponent implements OnInit {
         endDate: ['', []],
         file: ['', []]
     })
-  //   this.tenderForm = new FormGroup({ 
-  //     title: new FormControl(""),
-  //     issuingAuthority: new FormControl(""),
-  //     endDate: new FormControl(""),
-  //     file: new FormControl(""),
-  //     tenderNumber: new FormControl("")
-  //  }); 
-    // this.tenderForm = this.formBuilder.group({
-    //   title: ['', []],
-    //   issuingAuthority: ['', []],
-    //   endDate: ['', []],
-    //   file: ['', []]
-    // })
+ 
   }
+  
+               onFileSelected(event: any){
+                  console.log(event);
+                  this.selectedFile=<File>event.target.files[0];
+                }
+        
+                  
+
   tenderUpload() {
+    let data=
+      {
+          'title':this.tenderForm.value.title,
+          'issuingAuthority':this.tenderForm.value.issuingAuthority,
+          'endDate':this.tenderForm.value.endDate,
+        }
+      
+  
+      // Build formData object.
+let formData = new FormData();
+ formData.append('tenderData', JSON.stringify(data));
+ formData.append('file',this.selectedFile,this.selectedFile.name);
+    
     // debugger
-    this.tenderservice.tenderRegister(this.tenderForm.value).subscribe((data:any) => {
-      console.log(data);
+    this.tenderservice.tenderRegister(formData).subscribe((tenderData) => {
+      console.log(tenderData);
+      console.log(this.tenderForm.value);
     })
   }
-  // tenderUpload(){
-  //   let params=new HttpParams();
-  //   params=params.append('title','any');
-  //   params=params.append('issuingAuthority','any');
-  //   params=params.append('endDate','any');
-  //   params=params.append('file','any');
-  //   params=params.append('tenderNumber','any');
-  //   return this.httpclient.post(this.PATH_OF_API2+'/tenderRegister')
-  // }
+
 
 }

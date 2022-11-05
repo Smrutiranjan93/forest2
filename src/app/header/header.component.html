@@ -1,245 +1,110 @@
-<div class="container-fluid">
-  <img src="\assets\images\team\mainhead1.jpg" alt="" style="height:140px ; width:100%">
-</div>
-
-<nav class="navbar navbar-expand-lg" style="background-color:#4D4E10 ;">
-    <div class="container-fluid">
-      <!-- <a class="navbar-brand" href="#">Navbar</a> -->
-        <div class="container contact-info d-flex align-items-center">
-      <i class="bi bi-phone d-flex align-items-center" style="color:white ;"><span>-06764- 253654</span></i>
-      <i class="bi bi-clock d-flex align-items-center ms-4"  style="color:white ;"><span> Mon-Sat: 10AM - 17PM</span></i>
+  <!-- ======= Top Bar ======= -->
+  <div id="topbar" class="d-flex align-items-center fixed-top">
+    <div class="container d-flex align-items-center justify-content-center justify-content-md-between">
+      <div class="align-items-center d-none d-md-flex">
+        <a href="index.html" class="logo me-auto"><img src="assets/images/image22/logoheader.jfif" alt=""></a>
+      <a class="logoo me-auto"><img src="https://www.odishafdc.com/images/ofdc-logo.png" alt=""style="cursor:pointer;"></a>
+     
+      </div>
+      <div class="d-flex align-items-center">
+        <button type="button" class="btn btn-outline-secondary btn-rounded">
+          <a class="font-button plus" style="color: white;" id="plusBtn" onclick="plus()">A+</a>
+        </button>&nbsp;
+        <button type="button" class="btn btn-outline-secondary btn-rounded">
+          <a class="font-button plus" style="color: white;" id="defaultBtn" onclick="normal()">A</a>
+        </button>&nbsp;
+        <button type="button" class="btn btn-outline-secondary btn-rounded">
+          <a class="font-button plus" style="color: white;" id="minusBtn" onclick="minus()">A-</a>
+        </button>&nbsp;&nbsp;
+       
+        <!-- <div class="dropdown">
+          <button class="btn btn-outline-secondary btn-rounded dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Select Language
+          </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" routerLink="/career">English</a>
+            <a class="dropdown-item" routerLink="/career">Hindi</a>
+          </div>
+        </div> -->
+        <button style="padding: 2px; height:30px">
+          <div id="google_translate_element"></div>
+        </button>
+       
+      </div>
+      
     </div>
-      <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button> -->
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <!-- <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
+  </div>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top">
+    <div class="container d-flex align-items-center">
+
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <!-- <h1 class="logo me-auto"><a href="index.html">Medicio</a></h1> -->
+
+      <nav id="navbar" class="navbar order-last order-lg-0">
+        <ul>
+          <li><a class="nav-link scrollto " routerLink="/">HOME</a></li>
+          <li class="dropdown"><a routerLink="/career"><span>ABOUT US</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a routerLink="/aboutus">ABOUT</a></li>
+              <li><a routerLink="/plan">FUTURE PLAN</a></li>
+            </ul>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
-          </li> -->
-          <!-- <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Dropdown
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="#">Action</a></li>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
-              <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
+          <li class="dropdown"><a class="nav-link scrollto" href="#services"><span>ACTIVITIES</span><i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a routerLink="/timberfirewood">TIMBER & FIREWOOD</a></li>
+              <li><a routerLink="/kenduleaf">KENDULEAF</a></li>
+              <li><a routerLink="/bamboo">BAMBOO</a></li>
+              <li><a routerLink="/plantation">PLANTATION & LANDSCAPING</a></li>
+              <li><a routerLink="/siteclearance">SITE CLEARANCE PROJECT</a></li>
+            </ul>
+          </li>
+          <li class="dropdown"><a class="nav-link scrollto" href="#departments"><span>E-TENDER</span><i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a routerLink="/tender">UPLOAD TENDER</a></li>
+              <li><a routerLink="/tenderfiles">TENDER FILES</a></li>
+            </ul>
+          </li>
+          <li class="dropdown"><a class="nav-link scrollto" routerLink="/stockavailability"><span>STOCK AVAILBILITY</span><i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a routerLink="/career">ROUND TIMBER</a></li>
+              <li><a routerLink="/sawntimber">SAWN TIMBER</a></li>
+              <li><a routerLink="/roundtimber">ROUND FIREWOOD</a></li>
+              <li><a routerLink="/career">SAWN FIREWOOD</a></li>
+              <li><a routerLink="/career">POLES & BALLIES</a></li>
+            </ul></li>
+          <li class="dropdown"><a class="nav-link scrollto" routerLink="/bookings"><span>BOOKING & CALENDAR</span><i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a routerLink="/eventdetails">EVENT DETAILS</a></li>
+              <li><a routerLink="/bookings">BOOKING</a></li>
+            </ul></li>
+          <li><a class="nav-link scrollto" routerLink="/career">CARRIER</a></li>
+          <li><a class="nav-link scrollto" routerLink="/research">RESEARCH</a></li>
+          <li><a class="nav-link scrollto" routerLink="/photos">GALLERY</a></li>
+          <li><a class="nav-link scrollto" routerLink="/contact">CONTACT US</a></li>
+          <!-- <li class="dropdown"><a routerLink="/career"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a routerLink="/career">Drop Down 1</a></li>
+              <li class="dropdown"><a routerLink="/career"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a>
+                <ul>
+                  <li><a routerLink="/career">Deep Drop Down 1</a></li>
+                  <li><a routerLink="/career">Deep Drop Down 2</a></li>
+                  <li><a routerLink="/career">Deep Drop Down 3</a></li>
+                  <li><a routerLink="/career">Deep Drop Down 4</a></li>
+                  <li><a routerLink="/career">Deep Drop Down 5</a></li>
+                </ul>
+              </li>
+              <li><a routerLink="/career">Drop Down 2</a></li>
+              <li><a routerLink="/career">Drop Down 3</a></li>
+              <li><a routerLink="/career">Drop Down 4</a></li>
             </ul>
           </li> -->
-          <!-- <li class="nav-item">
-            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-          </li> -->
         </ul>
-        <form class="d-flex">
-          <!-- <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success" type="submit">Search</button> -->
-          <button type="button" class="btn btn-warning">ADMIN</button>
-        </form>
-      </div>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+      <a routerLink="greivanceregistration" class="appointment-btn scrollto">GRIEVANCE</a>
+
     </div>
-  </nav>
-
-<div id="topbar" class="d-flex align-items-center fixed-top">
-  <div class="container d-flex justify-content-center justify-content-md-between">
-
-    <!-- <div class="contact-info d-flex align-items-center">
-      <i class="bi bi-phone d-flex align-items-center"><span>+1 5589 55488 55</span></i>
-      <i class="bi bi-clock d-flex align-items-center ms-4"><span> Mon-Sat: 11AM - 23PM</span></i>
-    </div> -->
-
-    <div class="languages d-none d-md-flex align-items-center">
-      <!-- <ul>
-        <li>English</li>
-        <li><a href="#">Hi</a></li>
-      </ul> -->
-    </div>
-  </div>
-</div>
-
-<header>
-  <div class="container">
-      <input type="checkbox" name="" id="check">
-      
-      <!-- <div class="logo-container">
-          <h3 class="logo">Brand<span>Name</span></h3>
-      </div> -->
-
-      <div class="nav-btn">
-          <div class="nav-links">
-              <ul>
-                  <li class="nav-link" style="--i: .6s">
-                      <a href="#">HOME </a>
-                  </li>
-                  <li class="nav-link" style="--i: .85s">
-                      <a routerLink="/aboutus">ABOUT US<i class="fas fa-caret-down"></i></a>
-                      <div class="dropdown">
-                          <ul>
-                              <li class="dropdown-link">
-                                  <a routerLink="/aboutus">ABOUT </a>
-                              </li>
-                              <li class="dropdown-link">
-                                  <a routerLink="/plan">FUTURE PLAN </a>
-                              </li>
-                              
-                              <div class="arrow"></div>
-                          </ul>
-                      </div>
-                  </li>
-                  <li class="nav-link" style="--i: 1.1s">
-                      <a href="#">ACTIVITIES<i class="fas fa-caret-down"></i></a>
-                      <div class="dropdown">
-                          <ul>
-                              <li class="dropdown-link">
-                                  <a routerLink="/timberfirewood">TIMBER & FIREWOOD </a>
-                              </li>
-                              <li class="dropdown-link">
-                                  <a routerLink="/kenduleaf">KENDULEAF </a>
-                              </li>
-                              <li class="dropdown-link">
-                                <a routerLink="/bamboo">BAMBOO</a>
-                            </li>
-                            <li class="dropdown-link">
-                              <a routerLink="/plantation">PLANTATION & LANDSCAPING</a>
-                          </li>
-                          <li class="dropdown-link">
-                            <a routerLink="/siteclearance">SITE CLEARANCE PROJECT</a>
-                        </li>
-                              <!-- <li class="dropdown-link">
-                                  <a href="#">Link 3<i class="fas fa-caret-down"></i></a>
-                                  <div class="dropdown second">
-                                      <ul>
-                                          <li class="dropdown-link">
-                                              <a href="#">Link 1</a>
-                                          </li>
-                                          <li class="dropdown-link">
-                                              <a href="#">Link 2</a>
-                                          </li>
-                                          <li class="dropdown-link">
-                                              <a href="#">Link 3</a>
-                                          </li>
-                                          <li class="dropdown-link">
-                                              <a href="#">More<i class="fas fa-caret-down"></i></a>
-                                              <div class="dropdown second">
-                                                  <ul>
-                                                      <li class="dropdown-link">
-                                                          <a href="#">Link 1</a>
-                                                      </li>
-                                                      <li class="dropdown-link">
-                                                          <a href="#">Link 2</a>
-                                                      </li>
-                                                      <li class="dropdown-link">
-                                                          <a href="#">Link 3</a>
-                                                      </li>
-                                                      <div class="arrow"></div>
-                                                  </ul>
-                                              </div>
-                                          </li>
-                                          <div class="arrow"></div>
-                                      </ul>
-                                  </div>
-                              </li>
-                              <li class="dropdown-link">
-                                  <a href="#">Link 4</a>
-                              </li> -->
-                              <div class="arrow"></div>
-                          </ul>
-                      </div>
-                  </li>
-                  <li class="nav-link" style="--i: .85s">
-                    <a routerLink="/tender">E-TENDER<i class="fas fa-caret-down"></i></a>
-                    <div class="dropdown">
-                        <ul>
-                            <li class="dropdown-link">
-                                <a routerLink="/tender">Upload Tender</a>
-                            </li> 
-                            <li class="dropdown-link">
-                              <a routerLink="/tenderfiles"> Tender Files</a>
-                          </li>
-                            <div class="arrow"></div>
-                        </ul>
-                    </div>
-                </li>
-                <li class="nav-link" style="--i: .85s">
-                  <a routerLink="/stockavailability">STOCK AVAILBILITY<i class="fas fa-caret-down"></i></a>
-                  <div class="dropdown">
-                      <ul>
-                          <li class="dropdown-link">
-                              <a routerLink="/roundtimber">ROUND TIMBER</a>
-                          </li>
-                          <li class="dropdown-link">
-                              <a href="#">SAWN TIMBER</a>
-                          </li>
-
-                          <li class="dropdown-link">
-                            <a href="#">ROUND FIREWOOD</a>
-                        </li>
-                        <li class="dropdown-link">
-                          <a href="#">SAWN FIREWOOD</a>
-                      </li>
-                      <li class="dropdown-link">
-                        <a href="#">POLES & BALLIES</a>
-                    </li>
-                          <div class="arrow"></div>
-                      </ul>
-                  </div>
-              </li>
-              <li class="nav-link" style="--i: .85s">
-                <a href="#">BOOKING & CALENDER<i class="fas fa-caret-down"></i></a>
-                <div class="dropdown">
-                    <ul>
-                        <li class="dropdown-link">
-                            <a routerLink="/eventdetails">EVENT DETAILS</a>
-                        </li>
-                        <li class="dropdown-link">
-                            <a href="#">BOOKING</a>
-                        </li>
-                        
-                        <div class="arrow"></div>
-                    </ul>
-                </div>
-            </li>
-              
-                  <li class="nav-link" style="--i: 1.35s">
-                      <a [routerLink]="['/career']">CARRIER</a>
-                  </li>
-                  <li class="nav-link" style="--i: 1.35s">
-                    <a routerLink="/research">RESEARCH</a>
-                </li>
-                <li class="nav-link" style="--i: 1.35s">
-                  <a routerLink="/photos">GALLERY</a>
-              </li>
-              <!-- <li class="nav-link" style="--i: 1.35s">
-                <a href="#">GRIEVANCE</a>
-            </li> -->
-            <li class="nav-link" style="--i: 1.35s">
-              <!-- <a href="#contactus">CONTACT US</a> -->
-              <a routerLink="/contact">CONTACT US</a>
-          </li>
-          <li class="nav-link" style="--i: 1.35s">
-            <!-- <a class="button" href="#">Click here!</a> -->
-            <a href="greivanceregistration"> <button type="submit" class="button" style="font-weight:bolder ;  font-size: 9x;" >  GRIEVANCE</button> </a>
-          </li>
-              </ul>
-          </div>
-</div>
-      
-
-      <div class="hamburger-menu-container">
-          <div class="hamburger-menu">
-              <div></div>
-          </div>
-      </div>
-  </div>
-</header>
-<!-- <main>
-  <section>
-      <div class="overlay">
-        bjhgjhgjhgjh
-      </div>
-  </section>
-</main> -->
+  </header><!-- End Header -->

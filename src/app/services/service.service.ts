@@ -35,15 +35,19 @@ tenderRegister(values: any): Observable<any>{
   // params=params.append('file','file');
   // params=params.append('tenderNumber','tenderNumber');
   // console.log(params);
- const  payload = {
-  title : values?.title || '',
-  issuingAuthority: values?.issuingAuthority,
-  endDate: values?.endDate || '',
-  file: '',
-  tenderNumber: ''
+//  const  payload = {
+//   title : values?.title || '',
+//   issuingAuthority: values?.issuingAuthority,
+//   endDate: values?.endDate || '',
+//   file: '',
+//   tenderNumber: ''
+  
 
- }
-  return this.http.post(this.PATH_OF_API +'/tenderRegister', payload);
+//  }
+  return this.http.post(this.PATH_OF_API +'/tenderRegister',values);
+}
+getTenderList(){
+  return this.http.get(this.PATH_OF_API +'/fetchTenderList');
 }
 
 greivanceRegister(values: any): Observable<any>{

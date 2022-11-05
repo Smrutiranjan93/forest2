@@ -4,6 +4,7 @@ import { BodyComponent } from './body/body.component';
 import { CareerComponent } from './career/career.component';
 import { AboutComponent } from './common/about/about.component';
 import { BambooComponent } from './common/bamboo/bamboo.component';
+import { BookingComponent } from './common/booking/booking.component';
 import { ContactUsComponent } from './common/contact-us/contact-us.component';
 //import { ContactUsComponent } from './common/contact-us/contact-us.component';
 import { EventdetailsComponent } from './common/eventdetails/eventdetails.component';
@@ -97,6 +98,10 @@ const routes: Routes = [
 {
   path:'greivanceregistration',
   component:GreivanceregistrationComponent
+},
+{
+  path:'bookings',
+  component:BookingComponent
 }
 
 ];

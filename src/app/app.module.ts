@@ -17,6 +17,7 @@ import { TenderfilesComponent } from './common/tenderfiles/tenderfiles.component
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { TenderComponent } from './common/tender/tender.component';
 import { GreivanceregistrationComponent } from './common/greivanceregistration/greivanceregistration.component';
+import { BookingComponent } from './common/booking/booking.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { GreivanceregistrationComponent } from './common/greivanceregistration/g
     ContactUsComponent,
     TenderfilesComponent,
     TenderComponent,
-    GreivanceregistrationComponent
+    GreivanceregistrationComponent,
+    BookingComponent
   ],
   imports: [
     BrowserModule,

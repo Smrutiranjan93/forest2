@@ -1,4 +1,4 @@
-<section id="breadcrumbs" class="breadcrumbs">
+<section id="breadcrumbs" class="breadcrumbs" style="margin-top:140px ;">
     <div class="container">
 
       <div class="d-flex justify-content-between align-items-center">
@@ -92,7 +92,7 @@
     </div>
     <div class="col-md-4 mt-5">
         <label class="col-md-4 control-label" for="myfile">Select a file:</label> <br>
-        <input type="file" formControlName="file" id="myfile" name="file">
+        <input type="file" formControlName="file" (change)="onFileSelected1($event)" id="myfile" name="file">
     </div>
     <!-- <div class="col-md-4">
         <label class="col-md-4 control-label">area</label>  

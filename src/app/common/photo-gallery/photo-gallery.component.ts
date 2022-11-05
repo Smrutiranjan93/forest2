@@ -12,4 +12,7 @@ export class PhotoGalleryComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  
+
+
 }
