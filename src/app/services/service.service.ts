@@ -52,19 +52,19 @@ getTenderList(){
 
 greivanceRegister(values: any): Observable<any>{
   console.log('values', values);
- const  payload = {
-  complaintCategory : values?.complaintCategory || '',
-  complaint: values?.complaint,
-  date: values?.date || '',
-  name: values?.name || '',
-  email: values?.email || '',
-  mobileNo: values?.mobileNo || '',
-  houseNo: values?.houseNo || '',
-  street: values?.street || '',
-  area: values?.area || '',
-  complainDescription: values?.complainDescription || '',
-  file: '',
- }
-  return this.http.post(this.PATH_OF_API +'/complaintRegister', payload);
+//  const  payload = {
+//   complaintCategory : values?.complaintCategory || '',
+//   complaint: values?.complaint,
+//   date: values?.date || '',
+//   name: values?.name || '',
+//   email: values?.email || '',
+//   mobileNo: values?.mobileNo || '',
+//   houseNo: values?.houseNo || '',
+//   street: values?.street || '',
+//   area: values?.area || '',
+//   complainDescription: values?.complainDescription || '',
+//   file: '',
+//  }
+  return this.http.post(this.PATH_OF_API +'/complaintRegister',values);
 }
 }

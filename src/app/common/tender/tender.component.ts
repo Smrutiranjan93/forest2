@@ -1,6 +1,6 @@
 // import { HttpParams } from '@angular/common/http'; 
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup } from '@angular/forms';
 import { ServiceService } from 'src/app/services/service.service';
 
 @Component({
@@ -20,7 +20,7 @@ export class TenderComponent implements OnInit {
   ngOnInit(): void {
     this.tenderForm = this.formBuilder.group({
       title: ['', []],
-        issuingAuthority: ['', []],
+        issuingAuthority: ['',[]],
         endDate: ['', []],
         file: ['', []]
     })

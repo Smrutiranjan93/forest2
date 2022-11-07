@@ -46,7 +46,7 @@
     </div>
     <div class="col-md-4">
         <label class="col-md-4 control-label">Date</label>  
-        <input   name="date" placeholder="Date" formControlName="date" class="form-control"  type="date" id="myId" >
+        <input   name="startDate" placeholder="Date" formControlName="startDate" class="form-control"  type="date" id="myId" >
     </div>
    
 </div>
@@ -92,7 +92,7 @@
     </div>
     <div class="col-md-4 mt-5">
         <label class="col-md-4 control-label" for="myfile">Select a file:</label> <br>
-        <input type="file" formControlName="file" (change)="onFileSelected1($event)" id="myfile" name="file">
+        <input type="file" formControlName="file" (change)="onFileSelected($event)" id="myfile" name="file">
     </div>
     <!-- <div class="col-md-4">
         <label class="col-md-4 control-label">area</label>  
